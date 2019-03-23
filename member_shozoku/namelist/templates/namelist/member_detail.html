@@ -1,0 +1,10 @@
+{% extends "namelist/base_generic.html" %}
+
+{% block content %}
+  <h1>名前: {{ member.name }}</h1>
+	生年 {{member.year_of_birth}} <p />
+  <p><strong>所属:</strong> <a href="{% url 'syozoku-detail' member.syozoku.pk %}">{{ member.syozoku }}</a></p> <!-- author detail link not yet defined -->
+
+  <div style="margin-left:20px;margin-top:20px">
+
+{% endblock %}

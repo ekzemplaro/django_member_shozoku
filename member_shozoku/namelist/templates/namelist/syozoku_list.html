@@ -1,0 +1,16 @@
+{% extends "namelist/base_generic.html" %}
+
+{% block content %}
+  <h1>所属　リスト</h1>
+  {% if syozoku_list %}
+  <ul>
+    {% for syozoku in syozoku_list %}
+      <li>
+        <a href="{{ syozoku.get_absolute_url }}">{{ syozoku.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no syozokus registered.</p>
+  {% endif %}       
+{% endblock %}
