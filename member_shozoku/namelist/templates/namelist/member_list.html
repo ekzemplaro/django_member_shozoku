@@ -3,14 +3,14 @@
 {% block content %}
   <h1>メンバー　リスト</h1>
   {% if member_list %}
-  <ul>
+  <ol>
     {% for member in member_list %}
       <li>
         <a href="{{ member.get_absolute_url }}">{{ member.name }}</a>
         (<a href="{% url 'syozoku-detail' member.syozoku.pk %}">{{ member.syozoku }}</a>)
       </li>
     {% endfor %}
-  </ul>
+  </ol>
   {% else %}
     <p>There are no members registered.</p>
   {% endif %}       

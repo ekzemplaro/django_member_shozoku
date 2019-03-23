@@ -3,13 +3,13 @@
 {% block content %}
   <h1>所属　リスト</h1>
   {% if syozoku_list %}
-  <ul>
+  <ol>
     {% for syozoku in syozoku_list %}
       <li>
         <a href="{{ syozoku.get_absolute_url }}">{{ syozoku.name }}</a>
       </li>
     {% endfor %}
-  </ul>
+  </ol>
   {% else %}
     <p>There are no syozokus registered.</p>
   {% endif %}       
