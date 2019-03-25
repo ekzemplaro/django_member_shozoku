@@ -8,3 +8,10 @@ urlpatterns = [
     path('syozokus/', views.SyozokuListView.as_view(), name='syozokus'),
     path('syozoku/<int:pk>', views.SyozokuDetailView.as_view(), name='syozoku-detail'),
 ]
+#
+urlpatterns += [  
+    path('member/create/', views.MemberCreate.as_view(), name='member_create'),
+    path('member/<int:pk>/update/', views.MemberUpdate.as_view(), name='member_update'),
+    path('member/<int:pk>/delete/', views.MemberDelete.as_view(), name='member_delete'),
+]
+#

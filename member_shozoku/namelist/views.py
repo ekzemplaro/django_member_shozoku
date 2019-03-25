@@ -37,3 +37,19 @@ class SyozokuListView(generic.ListView):
 
 class SyozokuDetailView(generic.DetailView):
     model = Syozoku
+
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from namelist.models import Member
+
+class MemberCreate(CreateView):
+    model = Member
+    fields = '__all__'
+
+class MemberUpdate(UpdateView):
+    model = Member
+    fields = '__all__'
+
+class MemberDelete(DeleteView):
+    model = Member
+    success_url = reverse_lazy('members')

@@ -5,6 +5,9 @@
 	生年 {{member.year_of_birth}} <p />
   <p><strong>所属:</strong> <a href="{% url 'syozoku-detail' member.syozoku.pk %}">{{ member.syozoku }}</a></p> <!-- author detail link not yet defined -->
 
-  <div style="margin-left:20px;margin-top:20px">
+
+<a href= {{member.pk}}/update>更新</a><p />
+<a href= {{member.pk}}/delete>削除</a><p />
+<a href= "/namelist/members">一覧</a><p />
 
 {% endblock %}
